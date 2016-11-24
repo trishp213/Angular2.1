@@ -13,6 +13,7 @@ export class ProductListComponent{
     toggleImage(): void {
         this.showImage = !this.showImage;
     }
+    listFilter: string = "cart";
     products: any[] = [ {
         "productId": 1,
         "productName": "Leaf Rake",
