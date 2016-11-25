@@ -17,11 +17,15 @@ export class ProductListComponent implements OnInit {
     toggleImage(): void {
         this.showImage = !this.showImage;
     }
-    listFilter: string = "cart";
+    listFilter: string = "";
     products: IProduct[];
+    errorMessage: any;
 
     ngOnInit(){        
-        this.products = this._productService.getProducts();
+        this._productService.getProducts()
+        .subscribe(
+            products => this.products = products, 
+            error => this.errorMessage = <any>error);
     }
 
     constructor (private _productService: ProductService){

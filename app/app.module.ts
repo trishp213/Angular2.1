@@ -1,15 +1,25 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { AppComponent }  from './app.component';
+import { HttpModule } from '@angular/http';
 
-import { ProductModule } from './products/product.module';
-//import { ProductListComponent } from './products/product-list.component';
-//import { ProductFilterPipe } from './products/product-filter.pipe'
+import { AppComponent }  from './app.component';
+import { ProductListComponent } from './products/product-list.component';
+import { ProductFilterPipe } from './products/product-filter.pipe';
+import { ProductService } from './products/product.service';
+
+/* Feature Modules */
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, ProductModule ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    FormsModule    
+  ],
+  declarations: [
+    AppComponent,ProductListComponent, ProductFilterPipe
+  ],
+  providers: [ ProductService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
