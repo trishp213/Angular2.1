@@ -31,4 +31,8 @@ export class ProductListComponent implements OnInit {
     constructor (private _productService: ProductService){
 
     }
+
+      onRatingClicked(message: string): void {
+        this.pageTitle = 'Product List: ' + message;
+    }
 }
