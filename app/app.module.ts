@@ -28,6 +28,10 @@ import { ProductService } from './products/product.service';
       component: DashboardComponent
     },
     {
+      path: 'product/:id',
+      component: ProductDetailComponent
+    },
+    {
       path: '',
       redirectTo: '/dashboard',
       pathMatch: 'full'
