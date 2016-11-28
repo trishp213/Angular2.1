@@ -10,7 +10,7 @@ import { ProductListComponent } from './products/product-list.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
 import { ProductService } from './products/product.service';
-import { StarComponent } from './shared/star-component';
+import { StarComponent } from './shared/star.component';
 
 /* Feature Modules */
 
