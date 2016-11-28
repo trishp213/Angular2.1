@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
 import { AppComponent }  from './app.component';
+import { DashboardComponent } from './home/dashboard.component';
 import { ProductListComponent } from './products/product-list.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
 import { ProductService } from './products/product.service';
@@ -20,12 +21,15 @@ import { ProductService } from './products/product.service';
     {
       path: 'products',
       component: ProductListComponent
+    },
+    {
+      path: 'dashboard',
+      component: DashboardComponent
     }
-])
-   
+    ])   
   ],
   declarations: [
-    AppComponent,ProductListComponent, ProductFilterPipe
+    AppComponent, DashboardComponent, ProductListComponent, ProductFilterPipe
   ],
   providers: [ ProductService ],
   bootstrap: [ AppComponent ]

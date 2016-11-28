@@ -4,8 +4,11 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'pm-app',
     template: `<div><h1>{{pageTitle}}</h1>
+                        <nav>
+                <a routerLink="/dashboard">Dashboard</a>
                 <a routerLink="/products">Products</a>
-                 <router-outlet></router-outlet>
+            </nav>
+            <router-outlet></router-outlet>
                 </div>`    
 })
 export class AppComponent { 
