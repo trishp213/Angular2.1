@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule }   from '@angular/router';
 
 import { AppComponent }  from './app.component';
 import { ProductListComponent } from './products/product-list.component';
@@ -14,7 +15,14 @@ import { ProductService } from './products/product.service';
   imports: [
     BrowserModule,
     HttpModule,
-    FormsModule    
+    FormsModule,
+    RouterModule.forRoot([
+    {
+      path: 'products',
+      component: ProductListComponent
+    }
+])
+   
   ],
   declarations: [
     AppComponent,ProductListComponent, ProductFilterPipe
