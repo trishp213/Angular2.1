@@ -7,6 +7,7 @@ import { RouterModule }   from '@angular/router';
 import { AppComponent }  from './app.component';
 import { DashboardComponent } from './home/dashboard.component';
 import { ProductListComponent } from './products/product-list.component';
+import { ProductDetailComponent } from './products/product-detail.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
 import { ProductService } from './products/product.service';
 
@@ -34,7 +35,7 @@ import { ProductService } from './products/product.service';
     ])
   ],
   declarations: [
-    AppComponent, DashboardComponent, ProductListComponent, ProductFilterPipe
+    AppComponent, DashboardComponent, ProductListComponent, ProductFilterPipe, ProductDetailComponent
   ],
   providers: [ ProductService ],
   bootstrap: [ AppComponent ]
