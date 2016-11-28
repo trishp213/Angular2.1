@@ -10,6 +10,7 @@ import { ProductListComponent } from './products/product-list.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
 import { ProductService } from './products/product.service';
+import { StarComponent } from './shared/star-component';
 
 /* Feature Modules */
 
@@ -39,7 +40,7 @@ import { ProductService } from './products/product.service';
     ])
   ],
   declarations: [
-    AppComponent, DashboardComponent, ProductListComponent, ProductFilterPipe, ProductDetailComponent
+    AppComponent, DashboardComponent, ProductListComponent, ProductFilterPipe, ProductDetailComponent, StarComponent
   ],
   providers: [ ProductService ],
   bootstrap: [ AppComponent ]
