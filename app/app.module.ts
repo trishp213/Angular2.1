@@ -25,8 +25,13 @@ import { ProductService } from './products/product.service';
     {
       path: 'dashboard',
       component: DashboardComponent
-    }
-    ])   
+    },
+    {
+      path: '',
+      redirectTo: '/dashboard',
+      pathMatch: 'full'
+    }    
+    ])
   ],
   declarations: [
     AppComponent, DashboardComponent, ProductListComponent, ProductFilterPipe
