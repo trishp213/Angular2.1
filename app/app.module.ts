@@ -4,13 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
+import { SharedModule } from './shared/shared.module';
 import { AppComponent }  from './app.component';
 import { DashboardComponent } from './home/dashboard.component';
 import { ProductListComponent } from './products/product-list.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
 import { ProductService } from './products/product.service';
-import { StarComponent } from './shared/star.component';
+//import { StarComponent } from './shared/star.component';
 
 /* Feature Modules */
 
@@ -19,6 +20,7 @@ import { StarComponent } from './shared/star.component';
     BrowserModule,
     HttpModule,
     FormsModule,
+    SharedModule,
     RouterModule.forRoot([
     {
       path: 'products',
@@ -40,7 +42,8 @@ import { StarComponent } from './shared/star.component';
     ])
   ],
   declarations: [
-    AppComponent, DashboardComponent, ProductListComponent, ProductFilterPipe, ProductDetailComponent, StarComponent
+    AppComponent, DashboardComponent, ProductListComponent, ProductFilterPipe, ProductDetailComponent, 
+    //StarComponent
   ],
   providers: [ ProductService ],
   bootstrap: [ AppComponent ]
