@@ -6,13 +6,10 @@ import { RouterModule }   from '@angular/router';
 
 import { AppComponent }  from './app.component';
 import { DashboardComponent } from './home/dashboard.component';
-import { ProductListComponent } from './products/product-list.component';
-import { ProductDetailComponent } from './products/product-detail.component';
-import { ProductFilterPipe } from './products/product-filter.pipe';
-import { ProductService } from './products/product.service';
-import { SharedModule  } from './shared/shared.module';
 
-/* Feature Modules */
+import { SharedModule  } from './shared/shared.module';
+import { ProductModule } from './products/product.module';
+
 
 @NgModule({
   imports: [
@@ -20,18 +17,11 @@ import { SharedModule  } from './shared/shared.module';
     HttpModule,
     FormsModule,
     SharedModule,
+    ProductModule,
     RouterModule.forRoot([
-    {
-      path: 'products',
-      component: ProductListComponent
-    },
     {
       path: 'dashboard',
       component: DashboardComponent
-    },
-    {
-      path: 'product/:id',
-      component: ProductDetailComponent
     },
     {
       path: '',
@@ -41,9 +31,8 @@ import { SharedModule  } from './shared/shared.module';
     ])
   ],
   declarations: [
-    AppComponent, DashboardComponent, ProductListComponent, ProductFilterPipe, ProductDetailComponent
+    AppComponent, DashboardComponent
   ],
-  providers: [ ProductService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
