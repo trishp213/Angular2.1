@@ -6,4 +6,4 @@ import { StarComponent } from './star.component';
     exports: [ StarComponent ],
     declarations: [ StarComponent ]
 })
-export class SharedModule{}
+export class SharedModule { }

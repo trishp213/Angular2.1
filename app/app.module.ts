@@ -12,8 +12,6 @@ import { ProductFilterPipe } from './products/product-filter.pipe';
 import { ProductService } from './products/product.service';
 import { SharedModule  } from './shared/shared.module';
 
-/* Feature Modules */
-
 @NgModule({
   imports: [
     BrowserModule,
@@ -22,17 +20,17 @@ import { SharedModule  } from './shared/shared.module';
     SharedModule,
     RouterModule.forRoot([
     {
-      path: 'products',
-      component: ProductListComponent
+    path: 'products',
+    component: ProductListComponent
+    },
+    {
+    path: 'product/:id',
+    component: ProductDetailComponent
     },
     {
       path: 'dashboard',
       component: DashboardComponent
-    },
-    {
-      path: 'product/:id',
-      component: ProductDetailComponent
-    },
+    },    
     {
       path: '',
       redirectTo: '/dashboard',
