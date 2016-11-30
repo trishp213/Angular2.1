@@ -10,7 +10,7 @@ import { ProductListComponent } from './products/product-list.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
 import { ProductService } from './products/product.service';
-import { StarComponent } from './shared/star.component';
+import { SharedModule  } from './shared/shared.module';
 
 /* Feature Modules */
 
@@ -19,6 +19,7 @@ import { StarComponent } from './shared/star.component';
     BrowserModule,
     HttpModule,
     FormsModule,
+    SharedModule,
     RouterModule.forRoot([
     {
       path: 'products',
@@ -40,7 +41,7 @@ import { StarComponent } from './shared/star.component';
     ])
   ],
   declarations: [
-    AppComponent, DashboardComponent, ProductListComponent, ProductFilterPipe, ProductDetailComponent, StarComponent
+    AppComponent, DashboardComponent, ProductListComponent, ProductFilterPipe, ProductDetailComponent
   ],
   providers: [ ProductService ],
   bootstrap: [ AppComponent ]
