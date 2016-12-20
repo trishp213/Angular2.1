@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule }   from '@angular/router';
 
-import { SharedModule  } from '..//shared/shared.module';
+import { SharedModule  } from '../shared/shared.module';
 
 import { ProductService } from './product.service';
 import { ProductListComponent } from './product-list.component';

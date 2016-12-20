@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params }   from '@angular/router';
+import { Router, ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 
 import 'rxjs/add/operator/switchMap';
@@ -19,7 +19,8 @@ export class ProductDetailComponent  implements OnInit {
     constructor(
         private _productService: ProductService,
         private _route: ActivatedRoute,
-        private _location: Location
+        private _location: Location,
+        private _router: Router
         ) {}
 
     ngOnInit() : void {      
@@ -28,6 +29,10 @@ export class ProductDetailComponent  implements OnInit {
         .subscribe(
             product => this.product = product,
             error => this.errorMessage = <any>error);
+    }
+
+    onBack() : void {
+        this._router.navigate(['/products']);
     }
 
 }
